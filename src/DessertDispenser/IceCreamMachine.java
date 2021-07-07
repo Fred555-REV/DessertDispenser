@@ -4,10 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IceCreamMachine {
+    public static double cost;
     public static List<Double> orderList = new ArrayList<>();
 
-    public void createNewOrder(int index) {
-        double cost = 0;
+    public void createNewOrder() {
+        cost = 0;
+    }
+
+    public void endOrder() {
+        orderList.add(cost);
     }
 
     public static void fillLeft(IceCream iceCream) {
