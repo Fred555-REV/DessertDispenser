@@ -33,21 +33,31 @@ public class IceCreamMachine {
 
     public static void coneDispenser(Container container, int amount) {
         if (amount > container.amount) {
-            System.out.println();
+            if (container.coneDip.equalsIgnoreCase("none")) {
+                System.out.println();
+            } else {
+                System.out.println();
+            }
+        } else {
+            System.out.println("Not enough cones, please refill.");
         }
+
+
     }
 
     public static void leftLever(IceCream left, int scoops) {
         if (scoops > left.scoops) {
             System.out.println(left.scoops + " scoops of " + left.flavor + " ice cream dispensed.");
         } else {
-            System.out.println("Not enough Ice Cream please refill");
+            System.out.println("Not enough " + left.flavor + " Ice Cream, please refill.");
         }
     }
 
     public static void midLever(IceCream left, IceCream right, int scoops) {
         if (scoops > (left.scoops / 2) + (right.scoops / 2)) {
             System.out.println(scoops + " scoops of " + left.flavor + " and " + right.flavor + " swirl ice cream");
+        } else {
+            System.out.println("Not enough " + left.flavor + " and " + right.flavor + " Ice Cream, please refill.");
         }
     }
 
@@ -55,7 +65,7 @@ public class IceCreamMachine {
         if (scoops > right.scoops) {
             System.out.println(right.scoops + " scoops of " + right.flavor + " ice cream dispensed.");
         } else {
-            System.out.println("Not enough Ice Cream please refill");
+            System.out.println("Not enough " + right.flavor + " Ice Cream, please refill.");
         }
     }
 
