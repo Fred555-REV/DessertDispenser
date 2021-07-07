@@ -4,8 +4,8 @@ public class Topping {
     String topping;
     int amount; // in spoons
 
-    public Topping(String topping, int amount) {
+    public Topping(String topping) {
         this.topping = topping;
-        this.amount = amount;
+        this.amount = 25;
     }
 }

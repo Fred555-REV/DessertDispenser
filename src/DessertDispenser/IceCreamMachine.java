@@ -23,27 +23,41 @@ public class IceCreamMachine {
         iceCream.scoops = 50;
     }
 
-    public static void fillContainerDispenser(Container container) {
-
+    public static void refillContainers(Container container) {
+        container.amount = 100;
     }
 
-    public static void fillToppingDispenser(Topping topping) {
-
+    public static void refillToppings(Topping topping) {
+        topping.amount = 25;
     }
 
-    public static void leftLever(int scoops) {
+    public static void coneDispenser(Container container, int amount) {
+        if (amount > container.amount) {
+            System.out.println();
+        }
     }
 
-    public static void midLever(int scoops) {
-
+    public static void leftLever(IceCream left, int scoops) {
+        if (scoops > left.scoops) {
+            System.out.println(left.scoops + " scoops of " + left.flavor + " ice cream dispensed.");
+        } else {
+            System.out.println("Not enough Ice Cream please refill");
+        }
     }
 
-    public static void rightLever(int scoops) {
-
+    public static void midLever(IceCream left, IceCream right, int scoops) {
+        if (scoops > (left.scoops / 2) + (right.scoops / 2)) {
+            System.out.println(scoops + " scoops of " + left.flavor + " and " + right.flavor + " swirl ice cream");
+        }
     }
 
-    public static void coneDispenser(int amount) {
-
+    public static void rightLever(IceCream right, int scoops) {
+        if (scoops > right.scoops) {
+            System.out.println(right.scoops + " scoops of " + right.flavor + " ice cream dispensed.");
+        } else {
+            System.out.println("Not enough Ice Cream please refill");
+        }
     }
+
 
 }
