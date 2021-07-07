@@ -79,8 +79,8 @@ public class IceCreamMachine {
             } else {
                 System.out.println(scoops + " scoops of " + left.flavor + " and " + right.flavor + " swirl ice cream");
             }
-            left.scoops -= scoops / 2;
-            right.scoops -= scoops / 2;
+            left.scoops -= (scoops / 2);
+            right.scoops -= (scoops / 2);
         } else {
             System.out.println("Not enough " + left.flavor + " and " + right.flavor + " Ice Cream, please refill.");
         }
